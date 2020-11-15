@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Dhtml</title>
+<script type="text/javascript">
+function montrer(id) {
+var objet = document.getElementById(id);
+for (var i = 1; i<=10; i++) {
+if (document.getElementById(’sousmenu’+i)) {
+document.getElementById(’sousmenu’+i).style.display=’none’;
+}
+}
+if (objet) {
+objet.style.display=’block’;
+}
+}
+</script>
+<style type="text/css">
+dl, dt, dd, ul, li { margin: 0px; padding: 0px;
+list-style-type: none;}
+#menu { position: absolute;
+top: 5; left: 10;}
+dl#menu { width: 140px;}
+dl#menu dt { cursor: pointer;
+margin: 2px 0;
+height: 20px;
+line-height: 20px;
+text-align: center;
+font :sans-serif 10pt;
+border: 1px solid black;
+background: #9cf;}
+dl#menu dd { border: 1px solid black;}
+dl#menu li { text-align: center;
+background: #fff;}
+dl#menu li a { color: #000;
+text-decoration: none;
+display: block;
+border: 0 none;
+height: 100%;}
+dl#menu dt a { color: #000;
+text-decoration: none;
+display: block;
+border: 0 none;
+height: 100%;}
+dl#menu li a:hover { background: #9cf;}
+dl#menu dt a:hover { background: #9cf;}
+</style>
+</head>
+<body onload="montrer()">
+<dl id="menu">
+<dt onclick="javascript:montrer(’sousmenu1’);">Chapitre 1</dt>
+<dd id="sousmenu1">
+<ul>
+<li><a href="#">Point 1</a></li>
+<li><a href="#">Point 2</a></li>
+<li><a href="#">Point 3</a></li>
+</ul>
+</dd>
+<dt onclick="javascript:montrer(’sousmenu2’);">Chapitre 2</dt>
+<dd id="sousmenu2">
+<ul>
+<li><a href="#">Point 1</a></li>
+<li><a href="#">Point 2</a></li>
+<li><a href="#">Point 3</a></li>
+</ul>
+</dd>
+<dt onclick="javascript:montrer(’sousmenu3’);">Chapitre 3</dt>
+<dd id="sousmenu3">
+<ul>
+<li><a href="#">Point 1</a></li>
+<li><a href="#">Point 2</a></li>
+<li><a href="#">Point 3</a></li>
+</ul>
+</dd>
+</dl>
+</body>
+</html>
